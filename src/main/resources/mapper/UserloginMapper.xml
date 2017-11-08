@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lix.mapper.UserloginMapper">
+  <resultMap id="BaseResultMap" type="com.lix.entity.Userlogin">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="userID" jdbcType="INTEGER" property="userid" />
+    <result column="userName" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="role" jdbcType="INTEGER" property="role" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lix.mapper.TeacherMapper">
+  <resultMap id="BaseResultMap" type="com.lix.entity.Teacher">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="userID" jdbcType="INTEGER" property="userid" />
+    <result column="userName" jdbcType="VARCHAR" property="username" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="birthYear" jdbcType="DATE" property="birthyear" />
+    <result column="degree" jdbcType="VARCHAR" property="degree" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="grade" jdbcType="DATE" property="grade" />
+    <result column="collegeID" jdbcType="INTEGER" property="collegeid" />
+  </resultMap>
+</mapper>

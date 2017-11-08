@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lix.mapper.SelectedcourseMapper">
+  <resultMap id="BaseResultMap" type="com.lix.entity.Selectedcourse">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="courseID" jdbcType="INTEGER" property="courseid" />
+    <result column="studentID" jdbcType="INTEGER" property="studentid" />
+    <result column="mark" jdbcType="INTEGER" property="mark" />
+  </resultMap>
+</mapper>

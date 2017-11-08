@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lix.mapper.CourseMapper">
+  <resultMap id="BaseResultMap" type="com.lix.entity.Course">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="courseID" jdbcType="INTEGER" property="courseid" />
+    <result column="courseName" jdbcType="VARCHAR" property="coursename" />
+    <result column="teacherID" jdbcType="INTEGER" property="teacherid" />
+    <result column="courseTime" jdbcType="VARCHAR" property="coursetime" />
+    <result column="classRoom" jdbcType="VARCHAR" property="classroom" />
+    <result column="courseWeek" jdbcType="INTEGER" property="courseweek" />
+    <result column="courseType" jdbcType="VARCHAR" property="coursetype" />
+    <result column="collegeID" jdbcType="INTEGER" property="collegeid" />
+    <result column="score" jdbcType="INTEGER" property="score" />
+  </resultMap>
+
+  <select id="findCoursePage" parameterType="com.lix.entity.Course" resultMap="BaseResultMap">
+    SELECT courseName,courseTime,classRoom,courseWeek,courseType  from course
+      <where>
+        <if test="coursename != null and coursename != ''">
+            courseName like concat('%',concat(#{coursename}, '%'))
+        </if>
+        <if test="coursetime != null and coursetime != ''">
+            and courseTime like concat(#{coursetime}, '%')
+        </if>
+        <if test="classroom != null and classroom != ''">
+            and classRoom like concat('%',concat(#{classroom}, '%'))
+        </if>
+        <if test="courseweek != null and courseweek != ''">
+            and courseWeek == #{courseweek}
+        </if>
+        <if test="coursetype != null and coursetype != ''">
+          and courseType like concat('%',concat(#{coursetype}, '%'))
+        </if>
+      </where>
+  </select>
+</mapper>
